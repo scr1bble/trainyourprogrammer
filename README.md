@@ -5,13 +5,13 @@
 # This is an h1-tag like the headline in html
 ## This is an h2-tag like the headline in html
 ###### This is an h6-tag like the headline in html
-```
+*```
 # This is an h1-tag like the headline in html
 ## This is an h2-tag like the headline in html
 ###### This is an h6-tag like the headline in html
 
 ## Emphasis
-```
+*```
 *This text will be italic* 
 _This will also be italic_
 
