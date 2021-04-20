@@ -4,8 +4,6 @@
 #- Liegt er richtig bekommt er das 9 Fache seines Einsatzes als Gewinn
 #- Programmieren Sie ein entsprechendes Programm, welches die Eingaben von der Tastatur einliest und
 # die Ausgaben auf dem Bildschirm liefert. Die zu erratende Zahl kann durch einen verfügbaren Zufallsgenerator gezogen werden.
-# 237
-
 
 from random import randint
 
@@ -31,7 +29,6 @@ class bet_game:
         except ValueError:
             print("\n-------------------------------------\nPlease insert a number\n-------------------------------------\n")
             temp = input("Press Enter to continue\n") 
-
 
     def game_function(self):
         
@@ -63,7 +60,6 @@ class bet_game:
                 else:
                     print("\n-------------------------------------\nInvalid number\n-------------------------------------\n")
                     temp = input("Press Enter to continue\n")
-
 
             else:
                 print("\n-------------------------------------\nInvalid number\n-------------------------------------\n")
