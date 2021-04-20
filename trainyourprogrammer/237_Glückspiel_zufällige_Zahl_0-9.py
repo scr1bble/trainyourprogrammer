@@ -80,6 +80,8 @@ class bet_game:
         while self.game_active and self.points > 0:
 
             self.menu()
+
+        print("You've lost all your points!")
     
 game = bet_game()
 game.run()
