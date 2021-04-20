@@ -77,7 +77,7 @@ class bet_game:
     def run(self):
 
         print("\nWelcome to the Bet Game")
-        while self.game_active:
+        while self.game_active and self.points > 0:
 
             self.menu()
     
