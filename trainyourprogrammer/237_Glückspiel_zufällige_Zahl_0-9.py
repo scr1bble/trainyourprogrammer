@@ -32,7 +32,6 @@ class bet_game:
             print("\n-------------------------------------\nPlease insert a number\n-------------------------------------\n")
             temp = input("Press Enter to continue\n") 
 
-
     def game_function(self):
         
         rand_num = randint(0, 9)
@@ -65,7 +64,6 @@ class bet_game:
                     print("\n-------------------------------------\nInvalid number\n-------------------------------------\n")
                     temp = input("Press Enter to continue\n")
 
-
             else:
                 print("\n-------------------------------------\nInvalid number\n-------------------------------------\n")
                 temp = input("Press Enter to continue\n")  
@@ -81,7 +79,10 @@ class bet_game:
 
             self.menu()
 
-        print("You've lost all your points!")
+        if self.points == 0:
+            print("You've lost all your points!")
+        else:
+            print("\nSee you later!")
     
 game = bet_game()
 game.run()
