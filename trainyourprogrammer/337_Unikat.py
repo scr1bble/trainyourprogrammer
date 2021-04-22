@@ -1,5 +1,5 @@
-#a = "der pfannkuchen schmeckt süß"
-#b = "der pfannkuchen schmeckt salzig"
+a = "der pfannkuchen schmeckt süß"
+b = "der pfannkuchen schmeckt salzig"
 
 #a = "apfel apfel"
 #b = "BANANA"
