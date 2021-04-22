@@ -19,6 +19,9 @@ class Kasse():
     def diebstahl(self):
         self.Kassenstand = 0
 
+    def Kleingeldbetrug(self):
+        self.Kassenstand += 1
+
 
 class Filiale():
     def __init__(self):
@@ -30,7 +33,7 @@ class Filiale():
         for i in range(random.randint(4,10)):
             self.Kassen.append(Kasse)
 
-    def GesamtKassenstandberechnen(self):
+    def gesamtKassenstandberechnen(self):
         for i in range(len(self.Kassen)):
             GesamtKassenstand += self.Kassen[i]
 
