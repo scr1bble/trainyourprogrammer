@@ -2,6 +2,8 @@ import string
 lower = string.ascii_lowercase
 upper = string.ascii_uppercase
 
+print("Herzlich willkommen beim Caesar_chiffre.py-Programm.")
+print("Viel Spaß beim \"Verschlüsseln\"")
 
 def encrypt(string, n):
     encrypted_string = ""
