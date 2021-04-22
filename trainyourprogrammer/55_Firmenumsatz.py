@@ -35,5 +35,6 @@ class Filiale():
 
     def gesamtKassenstandberechnen(self):
         for i in range(len(self.Kassen)):
-            GesamtKassenstand += self.Kassen[i]
+            self.GesamtKassenstand += self.Kassen[i].Kassenstand
+            
 
