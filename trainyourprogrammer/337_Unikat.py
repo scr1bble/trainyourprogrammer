@@ -1,6 +1,9 @@
 #a = "der pfannkuchen schmeckt süß"
 #b = "der pfannkuchen schmeckt salzig"
 
+a="heute ist ein dummer tag"
+b="heute ist ein hmmmmm tag"
+
 #a = "apfel apfel"
 #b = "BANANA"
 
