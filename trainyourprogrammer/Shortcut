@@ -1,0 +1,170 @@
+# Still in progresss
+
+import os
+import subprocess  
+import sys
+from PyQt5 import QtGui 
+from PyQt5.QtCore import *
+from PyQt5.QtGui import QIcon
+from PyQt5 import QtCore  
+import qdarkstyle   #pip install qdarkstyle 
+from PyQt5.QtWidgets import QApplication, QWidget, QInputDialog, QLineEdit, QPushButton,QLabel,QFileDialog  #pip install PyQt5
+
+class App(QWidget):
+
+    def __init__(self):
+        super().__init__()
+
+       
+        
+        app.setStyleSheet(qdarkstyle.load_stylesheet(qt_api='pyqt5'))
+        self.title = 'Deck'
+        self.left = 10
+        self.top = 10
+        self.width = 640
+        self.height = 480
+        self.initUI()
+        self.show()
+
+
+
+
+
+
+    
+    def initUI(self):
+
+        self.btn1 = QPushButton('Google', self)  #'---' Button name 
+        self.btn1.setGeometry(20, 280, 100, 40)
+        self.btn1.clicked.connect(self.showDialog1)
+    
+        self.btn2 = QPushButton('Steam', self)
+        self.btn2.setGeometry(150, 280, 100, 40)
+        self.btn2.clicked.connect(self.showDialog2)
+
+        self.btn3 = QPushButton('Spotify', self)
+        self.btn3.setGeometry(280, 280, 100, 40)
+        self.btn3.clicked.connect(self.showDialog3)
+
+        self.btn4 = QPushButton('', self)
+        self.btn4.setGeometry(20, 200, 100, 40)
+        self.btn4.clicked.connect(self.showDialog4)
+        self.btn4.setIcon(QIcon('Android.jpg'))          #Save and change the image in the folder where the project is located
+        self.btn4.setIconSize(QtCore.QSize(100,100))     #Icon size
+
+        self.btn5 = QPushButton('Arduino', self)
+        self.btn5.setGeometry(150, 200, 100, 40)
+        self.btn5.clicked.connect(self.showDialog5)
+
+        self.btn6 = QPushButton('Paint', self)
+        self.btn6.setGeometry(280, 200, 100, 40)
+        self.btn6.clicked.connect(self.showDialog6)
+
+        self.btn7 = QPushButton('Notpad ++', self)
+        self.btn7.setGeometry(20, 120, 100, 40)
+        self.btn7.clicked.connect(self.showDialog7)
+
+        self.btn8 = QPushButton('Editor', self)
+        self.btn8.setGeometry(150, 120, 100, 40)
+        self.btn8.clicked.connect(self.showDialog8)
+        
+        self.btn9 = QPushButton('VSC', self)
+        self.btn9.setGeometry(280, 120, 100, 40)
+        self.btn9.clicked.connect(self.showDialog9)
+
+        self.btn10 = QPushButton('', self)
+        self.btn10.setGeometry(20, 40, 100, 40)
+        self.btn10.clicked.connect(self.showDialog10)
+        self.btn10.setIcon(QIcon('Apatche NetBeans.png'))
+        self.btn10.setIconSize(QtCore.QSize(100,100))
+
+    
+        self.btn11 = QPushButton('', self)
+        self.btn11.setGeometry(150, 40, 100, 40)
+        self.btn11.clicked.connect(self.showDialog11)
+        self.btn11.setIcon(QIcon('Whatsapp.jpg'))
+        self.btn11.setIconSize(QtCore.QSize(100,100))
+        
+        self.btn12 = QPushButton('VM ', self)
+        self.btn12.setGeometry(280, 40, 100, 40)
+        self.btn12.clicked.connect(self.showDialog12)
+
+        self.btn13 = QPushButton('Shut down ', self)
+        self.btn13.setGeometry(20,350 , 100, 40)
+        self.btn13.clicked.connect(self.showDialog13)
+
+
+        self.btn14 = QPushButton('Discord ', self)
+        self.btn14.setGeometry(150,350 , 100, 40)
+        self.btn14.clicked.connect(self.showDialog14)
+
+
+        self.setGeometry(400, 400, 600, 450)
+        self.setWindowTitle('Deck')
+        self.show()
+
+
+
+
+
+    def showDialog1(self):
+        #subprocess.Popen(['C:\Program Files\Google\Chrome\Application\chrome.exe'])    #customize atei paths if it is not your default browser 
+        subprocess.Popen("start chrome /new-tab www.google.com ",shell = True)  #wenn es dein standart browser ist. www.google.com durch jede andere webseite tauschen
+
+     
+    def showDialog2(self):
+        subprocess.Popen(['C:\\Program Files (x86)\\Steam\\Steam.exe'])  #Customize file paths 
+
+
+
+    def showDialog3(self):
+        subprocess.Popen(['Spotify.exe'])#standard path
+       
+    def showDialog4(self):
+        subprocess.Popen(['D:\\Android Studio\\bin\\studio64.exe'])         #Customize file paths 
+
+
+
+    def showDialog5(self):
+        subprocess.Popen(['C:\\Users\\tobia\\Documents\\Dokumente\\Arduino\\Programm\\arduino-nightly-windows\\arduino-nightly\\arduino.exe'])         #Customize file paths 
+  
+        
+    def showDialog6(self):
+        subprocess.Popen(['mspaint.exe'])  #standard path
+
+    def showDialog7(self):
+        subprocess.Popen(['C:\\Program Files\\Notepad++\\notepad++.exe'])  #Customize file paths 
+
+
+
+    def showDialog8(self):
+        subprocess.Popen(['notepad.exe']) #standard path
+
+    def showDialog9(self):
+        subprocess.Popen(['C:\\Users\\tobia\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe'])   #Customize file paths
+        
+    def showDialog10(self):
+        subprocess.Popen(['C:\\Program Files\\NetBeans-12.2\\netbeans\\bin\\netbeans64.exe'])   #Customize file paths
+
+    def showDialog11(self):
+        subprocess.Popen(['C:\\ProgramData\\tobia\\WhatsApp\\WhatsApp.exe'])   #Customize file paths
+
+    def showDialog12(self):
+        subprocess.Popen(['C:\\Program Files (x86)\\VMware\\VMware Workstation\\vmplayer.exe'])   #Customize file paths
+
+    def showDialog13(self):
+        os.system("shutdown /s /t 0")  #Shutdown motherfucker 
+
+
+    def showDialog14(self):
+        subprocess.Popen(['C:\\Users\\tobia\\AppData\\Local\\Discord\\app-1.0.9001\\Discord.exe'])  #Customize file paths
+
+   
+
+      
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    ex = App()
+    sys.exit(app.exec_())         
