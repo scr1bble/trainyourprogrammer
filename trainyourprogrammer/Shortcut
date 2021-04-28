@@ -109,7 +109,7 @@ class App(QWidget):
 
     def showDialog1(self):
         #subprocess.Popen(['C:\Program Files\Google\Chrome\Application\chrome.exe'])    #customize atei paths if it is not your default browser 
-        subprocess.Popen("start chrome /new-tab www.google.com ",shell = True)  #wenn es dein standart browser ist. www.google.com durch jede andere webseite tauschen
+        subprocess.Popen("start chrome /new-tab https://www.youtube.com/watch?v=Lrj2Hq7xqQ8 ",shell = True)  #wenn es dein standart browser ist. www.google.com durch jede andere webseite tauschen
 
      
     def showDialog2(self):
